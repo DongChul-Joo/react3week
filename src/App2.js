@@ -69,6 +69,12 @@ function App2() {
             console.log(music)
         })
     },[])
+
+    //이벤트
+    const handleChange=(e)=>{
+        console.log(e.target.value);
+    }
+
     const html=music.map((m)=>
         <tr>
             <td>{m.rank}</td>
@@ -101,7 +107,9 @@ function App2() {
             <table className={"table"}>
                     <tr>
                         <td>
-                            <input type={"text"} className={"input-sm"} size={"25"}/>
+                            <input type={"text"} className={"input-sm"} size={"25"}
+                            onChange={handleChange}
+                            />
                         </td>
                     </tr>
             </table>
